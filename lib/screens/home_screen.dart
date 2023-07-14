@@ -1,6 +1,8 @@
+import 'package:bus_way/screens/about_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/bio_screen.dart';
+import 'about_app_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -46,7 +48,19 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             icon: Icon(Icons.info),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AboutAppScreen(message: 'NajiAMousa'),
+                ),
+              );
+              // Navigator.pushNamed(
+              //   context,
+              //   '/about_screen',
+              //   arguments: {'message' : 'najiPass'},
+              // );
+            },
             padding: EdgeInsets.zero,
             constraints: BoxConstraints(
               minWidth: 0,
@@ -96,10 +110,10 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(''),
-                fit: BoxFit.fill,
-              ),
+              // image: DecorationImage(
+              //   image: AssetImage('/images/img.jpg)'),
+              //   fit: BoxFit.fill,
+              // ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black26,
@@ -140,6 +154,15 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             child: Text('data'),
           ),
+          // Visibility(
+          //   visible: _ccurrentPage < 2,
+          //   maintainState: true,
+          //   maintainSize: true,
+          //   child: IconButton(
+          //     icon: Icon(Icons.arrow_back_ios),
+          //     onPressed: () {},
+          //   ),
+          // ),
         ],
       ),
     );

@@ -15,7 +15,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
     Future.delayed(
       Duration(seconds: 3),
       () {
-        Navigator.pushNamed(context, '/home_screen');
+        Navigator.pushNamed(context, '/main_screen');
       },
     );
   }
